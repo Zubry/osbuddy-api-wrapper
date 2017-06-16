@@ -48,15 +48,4 @@ class OSBuddy {
   }
 }
 
-const api = new OSBuddy({
-  cache: {
-    // The cache will expire in 15 minutes
-    'max-age': 15
-  }
-})
-
-api
-  .names()
-  .then(names => console.log(names))
-
 module.exports = OSBuddy;
