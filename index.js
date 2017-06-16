@@ -25,6 +25,15 @@ class OSBuddy {
   fetchItem(id) {
     return fetch(`https://api.rsbuddy.com/grandExchange?a=guidePrice&i=${id}`)
       .then(res => res.json())
+      .then(data => ({
+        'current-price': data.overall,
+        'offer-price': data.buying,
+        'sell-price': data.selling,
+        'margin': data.selling - data.buying,
+        'buying-quantity': data.buyingQuantity,
+        'selling-quantity': data.sellingQuantity,
+        'ratio': data.buyingQuantity / data.sellingQuantity
+      }))
   }
 
   /*
