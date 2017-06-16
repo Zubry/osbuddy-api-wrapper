@@ -27,9 +27,9 @@ class OSBuddy {
       .then(res => res.json())
       .then(data => ({
         'current-price': data.overall,
-        'offer-price': data.buying,
-        'sell-price': data.selling,
-        'margin': data.buying - data.selling,
+        'offer-price': data.selling,
+        'sell-price': data.buying,
+        'margin': data.selling - data.buying,
         'buying-quantity': data.buyingQuantity,
         'selling-quantity': data.sellingQuantity,
         'ratio': data.buyingQuantity / data.sellingQuantity
