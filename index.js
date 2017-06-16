@@ -29,7 +29,7 @@ class OSBuddy {
         'current-price': data.overall,
         'offer-price': data.buying,
         'sell-price': data.selling,
-        'margin': data.selling - data.buying,
+        'margin': data.buying - data.selling,
         'buying-quantity': data.buyingQuantity,
         'selling-quantity': data.sellingQuantity,
         'ratio': data.buyingQuantity / data.sellingQuantity
